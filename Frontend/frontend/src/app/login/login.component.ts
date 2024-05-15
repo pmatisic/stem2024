@@ -3,11 +3,14 @@ import { NgForm, FormsModule } from '@angular/forms';
 import { Router, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 //import { UserManagerService } from '../services/user-manager.service';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {MatButtonModule} from '@angular/material/button';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [FormsModule,CommonModule, RouterModule],
+  imports: [FormsModule,CommonModule, RouterModule,MatFormFieldModule,MatInputModule,MatButtonModule],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss'
 })

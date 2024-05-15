@@ -3,24 +3,24 @@
     <div *ngIf="loading" class="spinner"></div>
     <div id="message"></div>
     <form #registrationForm="ngForm" (ngSubmit)="submitRegistration(registrationForm)" novalidate>
+        <mat-form-field appearance="fill" class="form-group">
+            <mat-label>First name:</mat-label>
+            <input matInput type="text" name="firstname" ngModel #firstName="ngModel" required>
+        </mat-form-field>
+        <mat-form-field appearance="fill" class="form-group">
+            <mat-label>Last name:</mat-label>
+            <input matInput type="text" name="lastname" ngModel #lastName="ngModel" required>
+        </mat-form-field>
+        <mat-form-field appearance="fill" class="form-group">
+            <mat-label>Email:</mat-label>
+            <input matInput type="email" name="email" ngModel #email="ngModel" required email>
+        </mat-form-field>
+        <mat-form-field appearance="fill" class="form-group">
+            <mat-label>Password:</mat-label>
+            <input matInput type="password" name="password" ngModel #password="ngModel" required minlength="6">
+        </mat-form-field>
         <div class="form-group">
-            <label for="firstname">First name:</label>
-            <input type="text" name="firstname" ngModel #firstName="ngModel" required>
-        </div>
-        <div class="form-group">
-            <label for="lastname">Last name:</label>
-            <input type="text" name="lastname" ngModel #lastName="ngModel" required>
-        </div>
-        <div class="form-group">
-            <label for="email">Email:</label>
-            <input type="email" name="email" ngModel #email="ngModel" required email>
-        </div>
-        <div class="form-group">
-            <label for="password">Password:</label>
-            <input type="password" name="password" ngModel #password="ngModel" required minlength="6">
-        </div>
-        <div class="form-group">
-            <button id="register" type="submit">Register</button>
+            <button mat-flat-button color="primary" id="register" type="submit">Register</button>
         </div>
     </form>
     <div id="loginInstead">Already have an account? <a [routerLink]="['/login']" id="loginLink">Log in</a></div>

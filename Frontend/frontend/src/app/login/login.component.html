@@ -2,18 +2,20 @@
     <h1>Login</h1>
     <div id="message"></div>
     <form #loginForm="ngForm" (ngSubmit)="submitLogin(loginForm)" novalidate>
+        <mat-form-field appearance="fill" class="form-group">
+            <mat-label>Email:</mat-label>
+            <input matInput type="email" name="email" ngModel #email="ngModel" required>
+        </mat-form-field>
+        <mat-form-field appearance="fill" class="form-group">
+            <mat-label>Password:</mat-label>
+            <input matInput type="password" name="password" ngModel #password="ngModel" required>
+        </mat-form-field>
         <div class="form-group">
-            <label for="email">Email:</label>
-            <input type="email" name="email" ngModel #email="ngModel" required>
-        </div>
-        <div class="form-group">
-            <label for="password">Password:</label>
-            <input type="password" name="password" ngModel #password="ngModel" required>
-        </div>
-        <div class="form-group">
-            <button id="login" type="submit">Login</button>
+            <button mat-flat-button color="primary" id="login" type="submit">Login</button>
         </div>
     </form>
-    <a routerLink="/passwordReset" id="passwordResetLink" target="_blank">I forgot my password</a>
-    <div id="registerInstead">Don't have an account? <a [routerLink]="['/registration']" id="registrationLink">Register</a></div>
+    
+    <div id="loginInstead">Don't have an account? <a [routerLink]="['/registration']" class="loginLink">Register</a></div>
+
+    <a routerLink="/passwordReset" class="loginLink" id="up" target="_blank">I forgot my password</a>
 </div>
