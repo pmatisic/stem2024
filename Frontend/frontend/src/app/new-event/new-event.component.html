@@ -1,0 +1,62 @@
+<div class="cont">
+    <h1>Add Event</h1>
+    <form [formGroup]="eventForm" (ngSubmit)="saveEvent()">
+        <mat-form-field>
+          <mat-label>Name</mat-label>
+          <input matInput formControlName="name" required>
+        </mat-form-field>
+      
+        <mat-form-field>
+          <mat-label>Date and Time of Creation</mat-label>
+          <input matInput type="datetime-local" formControlName="creationDateTime" required>
+        </mat-form-field>
+      
+        <mat-form-field>
+          <mat-label>Affected Brand</mat-label>
+          <input matInput formControlName="affectedBrand" required>
+        </mat-form-field>
+      
+        <mat-form-field>
+          <mat-label>Description</mat-label>
+          <textarea matInput formControlName="description" rows="5" maxlength="1500" required></textarea>
+        </mat-form-field>
+      
+        <mat-form-field>
+          <mat-label>Malicious URL</mat-label>
+          <input matInput formControlName="maliciousUrl" required>
+        </mat-form-field>
+      
+        <mat-form-field>
+          <mat-label>Malicious Domain Registration Date</mat-label>
+          <input matInput type="date" formControlName="registrationDate" required>
+        </mat-form-field>
+      
+        <mat-form-field>
+          <mat-label>Malicious Domain DNS Records (A, NS, MX)</mat-label>
+          <textarea matInput formControlName="dnsRecords" rows="5" required></textarea>
+        </mat-form-field>
+      
+        <mat-form-field>
+          <mat-label>Matching Keywords</mat-label>
+          <input matInput formControlName="matchingKeywords">
+        </mat-form-field>
+      
+        <mat-form-field>
+          <mat-label>Status</mat-label>
+          <mat-select formControlName="status" required>
+            <mat-option value="todo">To Do</mat-option>
+            <mat-option value="inProgress">In Progress</mat-option>
+            <mat-option value="done">Done</mat-option>
+          </mat-select>
+        </mat-form-field>
+      
+        <mat-form-field>
+          <mat-label>Analyst Comments</mat-label>
+          <textarea matInput formControlName="analystComments" rows="5"></textarea>
+        </mat-form-field>
+      
+        <button mat-raised-button color="primary" type="submit">Save</button>
+      </form>
+      
+
+</div>
