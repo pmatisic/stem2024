@@ -1,0 +1,29 @@
+<div id="SearchContainer">
+    <h1>Event log</h1>
+    <div class="row">
+        <mat-form-field id="EventSearchBar">
+            <mat-label>Search events</mat-label>
+            <input matInput>
+        </mat-form-field>
+    </div>
+    <div class="row">
+        <mat-card class="event_card" *ngFor="let event of events">
+            <mat-card-header id="{{event.event_id}}">
+                <mat-card-title>{{event.name}}</mat-card-title>
+                <mat-card-subtitle>{{event.affected_brand}}</mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>{{event.description}}</mat-card-content>
+            <mat-card-actions align="end">
+                <button mat-icon-button color="primary" aria-label="Icon button with a info icon" [routerLink]="['/eventDetails/{{event.event_id}}']">
+                    <mat-icon>info</mat-icon>
+                  </button>
+                  <button mat-icon-button color="primary" aria-label="Icon button with a edit icon" [routerLink]="['/event']">
+                    <mat-icon>edit</mat-icon>
+                  </button>
+            </mat-card-actions>
+        </mat-card> 
+    </div>
+    <button class="up" color="primary" mat-fab aria-label="Icon button with a add icon" [routerLink]="['/event']">
+        <mat-icon>add</mat-icon>
+      </button>
+</div>

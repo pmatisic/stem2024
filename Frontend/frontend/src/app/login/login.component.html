@@ -1,0 +1,21 @@
+<div id="formContainer">
+    <h1>Login</h1>
+    <div id="message"></div>
+    <form #loginForm="ngForm" (ngSubmit)="submitLogin(loginForm)" novalidate>
+        <mat-form-field appearance="fill" class="form-group">
+            <mat-label>Email:</mat-label>
+            <input matInput type="email" name="email" ngModel #email="ngModel" required>
+        </mat-form-field>
+        <mat-form-field appearance="fill" class="form-group">
+            <mat-label>Password:</mat-label>
+            <input matInput type="password" name="password" ngModel #password="ngModel" required>
+        </mat-form-field>
+        <div class="form-group">
+            <button  mat-flat-button color="primary" id="login" type="submit">Login</button>
+        </div>
+    </form>
+    
+    <div id="loginInstead">Don't have an account? <a [routerLink]="['/registration']" class="loginLink">Register</a></div>
+
+    <a routerLink="/passwordReset" class="loginLink" id="up" target="_blank">I forgot my password</a>
+</div>
