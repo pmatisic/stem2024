@@ -1,7 +1,36 @@
-@use '../style-templates/templates.scss';
+
+:host{
+    height: 100%;
+}
+
+h1 {
+    font-size: xx-large;
+    margin-bottom: 2rem;
+}
+
+mat-form-field{
+    width:250px !important;
+ }
 
 #formContainer{
-    @extend %formContainerStyle
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    #message{
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: #ff0000;
+    }
+
+    button{
+        height: 2.5rem;
+    }
 }
 
 .form-group {
@@ -22,7 +51,7 @@
 
 #loginLink {
     margin-left: 5px;
-    color: #11CB54;
+    color: #3f51b5;
     font-weight: bold;
     text-decoration: none;
     cursor: pointer;
@@ -30,7 +59,4 @@
     &:hover {
         text-decoration: underline;
     }
-}
-button{
-    cursor: pointer;
 }

@@ -1,4 +1,3 @@
-$defaultFont: 'Arial', 'Helvetica', 'sans-serif';
 *, *::before, *::after {
     box-sizing: border-box;
   }
@@ -11,7 +10,6 @@ $defaultFont: 'Arial', 'Helvetica', 'sans-serif';
   body {
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
-    font-family: $defaultFont;
   }
   img, picture, video, canvas, svg {
     display: block;
@@ -31,7 +29,7 @@ $defaultFont: 'Arial', 'Helvetica', 'sans-serif';
     width: 48px;
     height: 48px;
     border: 5px solid #f5fff6;
-    border-bottom-color: #11cb54;
+    border-bottom-color: #3f51b5;
     border-radius: 50%;
     display: inline-block;
     box-sizing: border-box;
@@ -47,4 +45,3 @@ $defaultFont: 'Arial', 'Helvetica', 'sans-serif';
 }
 } 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

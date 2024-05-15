@@ -5,11 +5,12 @@ import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 import { phishing_event } from '../interfaces/event';
 import { RouterModule } from '@angular/router';
+import {MatIconModule} from '@angular/material/icon';
 
 @Component({
   selector: 'app-event-view',
   standalone: true,
-  imports: [CommonModule,MatInputModule,MatCardModule,MatButtonModule,RouterModule],
+  imports: [CommonModule,MatInputModule,MatCardModule,MatButtonModule,RouterModule,MatIconModule],
   templateUrl: './event-view.component.html',
   styleUrl: './event-view.component.scss'
 })
