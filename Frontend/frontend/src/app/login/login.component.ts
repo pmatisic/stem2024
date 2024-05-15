@@ -38,11 +38,7 @@ export class LoginComponent implements OnInit {
       let parameters = {method: 'POST', headers: header, body: JSON.stringify(body)}
 
       if (email === 'admin@gmail.com' && password === 'admin123') {
-        
         this.router.navigate(['/eventView']);
-      } else {
-        
-        
       }
     }
   }

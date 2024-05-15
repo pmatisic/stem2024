@@ -87,4 +87,40 @@ export class JwtManagerService {
     }
     return false;
   }
+
+  private async validRefreshToken(tokens: Tokens): Promise<boolean> {
+    let expirationDate = new Date(tokens.refreshTokenExpiresAt);
+
+    if (expirationDate > new Date()) {
+      return await this.tryRefreshToken(tokens);
+    }
+    return false;
+  }
+
+  private async tryRefreshToken(tokens: Tokens): Promise<boolean> {
+    let header = new Headers();
+    header.set("Content-Type", "application/json");
+    header.set("accept", "text/plain");
+    header.set("Authorization", "Bearer " + tokens.jwt);
+
+    let body = { jwt: tokens.jwt, refreshToken: tokens.refreshToken }
+    let parameters = { method: 'POST', headers: header, body: JSON.stringify(body) };
+
+    try {
+      let response = await fetch("https://localhost:32770/api"+ "/Users/TokenRefresh", parameters);
+      let body = await response.text();
+      if (response.status == 200) {
+        let bodyJSON = JSON.parse(body);
+        this.saveTokens(bodyJSON.jwt, bodyJSON.refreshToken, bodyJSON.refreshTokenExpiresAt);
+        return true;
+      } else {
+        let errorMessage = JSON.parse(body).message;
+        console.error(errorMessage);
+        return false;
+      }
+    } catch (error) {
+      console.error(error);
+      return false;
+    }
+  }
 }
