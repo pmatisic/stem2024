@@ -3,11 +3,14 @@ import { NgForm } from '@angular/forms';
 import { Router, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {MatButtonModule} from '@angular/material/button';
 
 @Component({
   selector: 'app-registration',
   standalone: true,
-  imports: [FormsModule,CommonModule, RouterModule],
+  imports: [FormsModule,CommonModule, RouterModule,MatFormFieldModule,MatInputModule,MatButtonModule],
   templateUrl: './registration.component.html',
   styleUrl: './registration.component.scss'
 })
