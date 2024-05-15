@@ -1,0 +1,31 @@
+@use '../style-templates/templates.scss';
+#SearchContainer{
+    @extend %formContainerStyle
+}
+
+#EventSearchBar{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    width: 800px;
+}
+
+.event_card {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    width: 500px;
+    label {
+      margin-bottom: 10px;
+    }
+
+    a{
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+    }
+}
+
+mat-card-content {
+    word-wrap: break-word;
+  }
