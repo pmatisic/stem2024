@@ -41,7 +41,7 @@ export class RegistrationComponent implements OnInit{
 
       try{
         this.loading = true;
-        let response = await fetch( "sadasd" + "/Users", parameters);
+        let response = await fetch( "https://localhost:32770/api/Users", parameters);
 
         if(response.status == 200){
           this.router.navigate(['/login']);
