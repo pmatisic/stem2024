@@ -13,9 +13,17 @@
                 <mat-card-subtitle>{{event.affected_brand}}</mat-card-subtitle>
             </mat-card-header>
             <mat-card-content>{{event.description}}</mat-card-content>
-            <mat-card-actions>
-                <a mat-flat-button color="primary" [routerLink]="['/registration']">More Info</a>
+            <mat-card-actions align="end">
+                <button mat-icon-button color="primary" aria-label="Icon button with a info icon">
+                    <mat-icon>info</mat-icon>
+                  </button>
+                  <button mat-icon-button color="primary" aria-label="Icon button with a edit icon">
+                    <mat-icon>edit</mat-icon>
+                  </button>
             </mat-card-actions>
         </mat-card>
     </div>
+    <button class="up" color="primary" mat-fab aria-label="Icon button with a add icon">
+        <mat-icon>add</mat-icon>
+      </button>
 </div>
