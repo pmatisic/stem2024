@@ -16,5 +16,5 @@
         </div>
     </form>
     <a routerLink="/passwordReset" id="passwordResetLink" target="_blank">I forgot my password</a>
-    <div id="registerInstead">Don't have an account? <a routerLink="/registration" id="registrationLink">Register</a></div>
+    <div id="registerInstead">Don't have an account? <a [routerLink]="['/registration']" id="registrationLink">Register</a></div>
 </div>
