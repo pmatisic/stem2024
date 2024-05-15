@@ -16,7 +16,7 @@
 	<name>jto</name>
 	<description>Service for STEM 2024 day 3</description>
 	<properties>
-		<java.version>17</java.version>
+		<java.version>22</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
