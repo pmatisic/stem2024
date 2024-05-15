@@ -26,3 +26,6 @@ To access our application, please use the following login credentials:
 
 # Security Measures
 In the development of our frontend and backend systems, we have adhered strictly to industry-standard best practices to ensure the highest levels of security and resilience against various types of cyber threats.
+
+# Organization
+We used github issues to document tasks and progress on our work
