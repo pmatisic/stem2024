@@ -1,0 +1,36 @@
+@use '../style-templates/templates.scss';
+
+#formContainer{
+    @extend %formContainerStyle
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+
+    label {
+      margin-bottom: 10px;
+    }
+}
+
+#loginInstead{
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+}
+
+#loginLink {
+    margin-left: 5px;
+    color: #11CB54;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+button{
+    cursor: pointer;
+}
