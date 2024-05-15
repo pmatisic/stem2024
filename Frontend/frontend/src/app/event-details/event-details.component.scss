@@ -1,0 +1,20 @@
+@use '../style-templates/templates.scss';
+#EventDetailsContainer{
+    @extend %formContainerStyle
+}
+
+.comment_card {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    width: 500px;
+    label {
+      margin-bottom: 10px;
+    }
+
+    a{
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+    }
+}

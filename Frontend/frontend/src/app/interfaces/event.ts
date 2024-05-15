@@ -28,7 +28,7 @@ export interface event_comments {
   comment_id: number;
   event_id: number;
   comment: string;
-  created_at: Date;
-  edited_at: Date;
+  created_at: string;
+  edited_at?: string;
   created_by:user;
 }
