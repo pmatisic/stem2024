@@ -1,12 +1,17 @@
+$defaultFont: 'Arial', 'Helvetica', 'sans-serif';
 *, *::before, *::after {
     box-sizing: border-box;
   }
   * {
     margin: 0;
   }
+  html, body {
+    height: 100%;
+  }
   body {
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
+    font-family: $defaultFont;
   }
   img, picture, video, canvas, svg {
     display: block;
@@ -21,3 +26,23 @@
   #root, #__next {
     isolation: isolate;
   }
+
+  .spinner {
+    width: 48px;
+    height: 48px;
+    border: 5px solid #f5fff6;
+    border-bottom-color: #11cb54;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+0% {
+    transform: rotate(0deg);
+}
+100% {
+    transform: rotate(360deg);
+}
+} 
