@@ -1,6 +1,19 @@
-@use '../style-templates/templates.scss';
+
 #SearchContainer{
-    @extend %formContainerStyle
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+mat-card-actions{
+  display: flex;
+  gap: 1rem;
+}
+
+h1{
+  font-size: xx-large;
+  margin: 2rem;
 }
 
 #EventSearchBar{
@@ -28,4 +41,8 @@
 
 mat-card-content {
     word-wrap: break-word;
+  }
+
+  .up{
+    margin-top: 1rem;
   }
