@@ -23,8 +23,6 @@ public class EventKeyword {
   @JoinColumn(name = "event_id", nullable = false)
   private PhishingEvent phishingEvent;
 
-  // Getters and Setters
-
   public Long getKeywordId() {
     return keywordId;
   }

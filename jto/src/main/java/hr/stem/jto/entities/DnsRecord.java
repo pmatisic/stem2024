@@ -26,8 +26,6 @@ public class DnsRecord {
   @JoinColumn(name = "event_id", nullable = false)
   private PhishingEvent phishingEvent;
 
-  // Getters and Setters
-
   public Long getDnsId() {
     return dnsId;
   }

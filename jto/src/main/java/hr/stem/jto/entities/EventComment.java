@@ -34,8 +34,6 @@ public class EventComment {
   @JoinColumn(name = "created_by", nullable = false)
   private User createdBy;
 
-  // Getters and Setters
-
   public Long getCommentId() {
     return commentId;
   }

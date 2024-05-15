@@ -42,8 +42,6 @@ public class User {
   @OneToMany(mappedBy = "createdBy", cascade = CascadeType.ALL, orphanRemoval = true)
   private List<EventComment> eventComments;
 
-  // Getters and Setters
-
   public Long getUserId() {
     return userId;
   }

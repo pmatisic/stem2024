@@ -55,8 +55,6 @@ public class PhishingEvent {
   @OneToMany(mappedBy = "phishingEvent", cascade = CascadeType.ALL, orphanRemoval = true)
   private List<EventComment> eventComments;
 
-  // Getters and Setters
-
   public Long getEventId() {
     return eventId;
   }
