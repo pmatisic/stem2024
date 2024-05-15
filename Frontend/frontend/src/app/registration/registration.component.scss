@@ -1,5 +1,9 @@
 @use '../style-templates/templates.scss';
 
+:host{
+    height: 100%;
+}
+
 #formContainer{
     @extend %formContainerStyle
 }
