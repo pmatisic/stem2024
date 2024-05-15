@@ -23,3 +23,6 @@ To access our application, please use the following login credentials:
 
 - Username: admin@gmail.com
 - Password: admin123
+
+# Security Measures
+In the development of our frontend and backend systems, we have adhered strictly to industry-standard best practices to ensure the highest levels of security and resilience against various types of cyber threats.
