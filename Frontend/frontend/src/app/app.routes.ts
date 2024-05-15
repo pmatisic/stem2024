@@ -9,6 +9,6 @@ export const routes: Routes = [
     { path: 'login', component: LoginComponent },
     { path: 'registration', component: RegistrationComponent },
     { path: 'eventView', component: EventViewComponent},
-    { path: 'eventDetails', component: EventDetailsComponent}
+    { path: 'eventDetails/:id', component: EventDetailsComponent}
 ];
 
